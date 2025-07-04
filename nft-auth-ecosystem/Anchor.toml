@@ -1,0 +1,32 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+nft_auth_ecosystem = "GvKVQhGgzGFowRH4SDCV45WyCkte1guFaRuEZchaQok7"
+product-auth = "4NNtCYK6cYm7gMxEqj5nC5gSvLDZC6g5FN8VCj8bGUKA"
+purchase-verification = "GaEJ97JCkcsE149KuoEMrs59uZ6HxbzRU8S9LtMoRntk"
+staking-rewards = "GDsfKjwHe3fHiwAGh35wyA4p61d2MibiJ7erEk4pmHHQ"
+usv-token = "D6PnWFL4QGJnrqN3vQy8AU9ynVNmhNFLP9QhLT17ad4R"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "/home/bs/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+
+
+[workspace]
+members = [
+    "programs/product-auth",
+    "programs/usv-token", 
+    "programs/purchase-verification",
+    "programs/staking-rewards"
+]

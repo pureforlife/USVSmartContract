@@ -1,0 +1,33 @@
+{
+  "license": "ISC",
+  "scripts": {
+    "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
+    "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
+    "ts-mocha": "ts-mocha -p ./tsconfig.json --timeout 1000000 tests/**/*.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@solana/spl-token": "^0.1.8",
+    "@solana/web3.js": "^1.98.2",
+    "borsh": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.5.0",
+    "mocha": "^11.7.0",
+    "prettier": "^2.6.2",
+    "ts-mocha": "^10.1.0",
+    "typescript": "^5.8.3"
+  },
+  "name": "nft_auth_program",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "description": ""
+}

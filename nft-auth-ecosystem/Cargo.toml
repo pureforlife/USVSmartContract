@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = [
+    "programs/product-auth",
+    "programs/usv-token",
+    "programs/purchase-verification", 
+    "programs/staking-rewards"
+]
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1
